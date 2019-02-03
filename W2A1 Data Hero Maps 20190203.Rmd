@@ -1,0 +1,44 @@
+---
+title: "DBS Data Hero"
+author: "Ivan Ip"
+date: "February 3, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## DBS Bank (Hong Kong) Limited
+DBS is a leading financial services group in Asia, with over 280 branches across 18 markets. We are headquartered in Singapore, with a growing presence in Greater China, Southeast Asia and South Asia. With 34 branches and over 4,000 employees, DBS Hong Kong provides a full range of services in consumer, SME and corporate banking solutions. We invite you to be part of our journey towards becoming the Asian bank of choice for the new Asia.
+
+####Required R Packages Setup
+```{r setup required packages}
+require(leaflet)
+```
+
+
+
+###DBS Bank (Hong Kong) Ltd - The Center
+```{r, eval=FALSE}
+DBS_HQ = leaflet() %>%
+  addTiles()%>%
+  addMarkers(lat = 22.2845800, lng = 114.154650, 
+            popup = "DBS (Hong Kong) Limited - The Center") %>% 
+  addCircles(weight = 1, lat = 22.2845800, lng = 114.154650, 
+             radius = 30, color = "red")
+DBS_HQ
+```
+
+```{r DBS (Hong Kong) Ltd Head Office, echo=FALSE}
+DBS_HQ = leaflet() %>%
+  addTiles()%>%
+  addMarkers(lat = 22.2845800, lng = 114.154650, 
+            popup = "DBS (Hong Kong) Limited - The Center") %>% 
+  addCircles(weight = 1, lat = 22.2845800, lng = 114.154650, 
+             radius = 38, color = "red")
+DBS_HQ
+```
+
+###DBS Bank (Hong Kong) Ltd - Award
+DBS Bank has recently named World¡¦s Best Digital Bank at the Euromoney Awards for Excellence.
